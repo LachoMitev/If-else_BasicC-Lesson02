@@ -1,0 +1,31 @@
+#include <iostream>
+
+int main() 
+{
+	double time1;
+	double time2;
+	double time3;
+
+	std::cin >> time1 >> time2 >> time3;
+
+	int timeAll;
+	
+	timeAll = time1 + time2 + time3;
+
+	int minutes = timeAll / 60;
+	int seconds = timeAll % 60;
+
+	if ( seconds <10) {
+
+		std::cout  << minutes << ":" << "0" << seconds << std::endl;
+	}
+
+	else {
+
+		std::cout << minutes << ":" << seconds << std::endl;
+	}
+
+
+
+	return 0;
+}
