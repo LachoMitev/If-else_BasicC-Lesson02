@@ -1,0 +1,43 @@
+#include <iostream>
+
+int main() 
+{
+	double recordSec;
+
+	double distanceInMeters;
+
+	double meterSeconds;
+
+	double delay;
+
+	int delayCount;
+
+	std::cin >> recordSec >> distanceInMeters >> meterSeconds;
+
+	double recordIvanSeconds = distanceInMeters * meterSeconds;
+
+
+	if (distanceInMeters >= 15) 
+	{
+		delayCount = distanceInMeters / 15;
+		delay = delayCount * 12.5;
+
+		recordIvanSeconds = recordIvanSeconds + delay;
+	}
+
+	if (recordSec <= recordIvanSeconds)
+	{
+		std::cout.precision(2);
+		std::cout << std::fixed;
+		std::cout << "No, he failed! He was " << recordIvanSeconds - recordSec << " seconds slower." << std::endl;
+	}
+
+	else
+	{
+		std::cout.precision(2);
+		std::cout << std::fixed;
+		std::cout << " Yes, he succeeded! The new world record is " << recordIvanSeconds << " seconds." << std::endl;
+	}
+
+	return 0;
+}
