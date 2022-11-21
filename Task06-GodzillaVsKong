@@ -1,0 +1,44 @@
+#include <iostream>
+
+int main() 
+{
+	
+	double budget;
+
+	int statists;
+
+	double priceSuit;
+
+	std::cin >> budget >> statists >> priceSuit;
+
+
+	double decor = budget * 0.1;
+
+
+	
+
+	if (statists >= 150) {
+
+		priceSuit = priceSuit - priceSuit * 0.1;
+
+	}
+
+	double budgetMovie = statists * priceSuit + decor;
+
+
+	if (budgetMovie > budget)
+	{
+		std::cout.precision(2);
+		std::cout << std::fixed;
+		std::cout << "Not enough money!" << std::endl;
+		std::cout << "Wingard needs " << budgetMovie - budget << " leva more." << std::endl;
+	}
+
+	else {
+		std::cout.precision(2);
+		std::cout << std::fixed;
+		std::cout << "Action!" << std::endl;
+		std::cout << "Wingard starts filming with " << budget - budgetMovie << " leva left." << std::endl;
+	}
+	return 0;
+} 
