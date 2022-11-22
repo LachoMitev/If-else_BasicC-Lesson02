@@ -1,0 +1,46 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+	double number;
+	string inputNumber;
+	string outputNumber;
+
+	std::cin >> number >> inputNumber >> outputNumber;
+
+	double result;
+
+	if (inputNumber == "mm", outputNumber == "m")
+	{
+		result = number * 0.001;
+	}
+	else if (inputNumber == "mm", outputNumber == "cm")
+	{
+		result = number * 0.1;
+	}
+	else if (inputNumber == "cm", outputNumber == "mm")
+	{
+		result = number * 10;
+	}
+	else if (inputNumber == "cm", outputNumber == "m")
+	{
+		result = number * 0.01;
+	}
+	else if (inputNumber == "m", outputNumber == "mm")
+	{
+		result = number * 1000;
+	}
+	else if (inputNumber == "m", outputNumber == "cm")
+	{
+		result = (number * 100);
+	}
+
+	std::cout.precision(3);
+	std::cout << std::fixed;
+	std::cout << result << std::endl;
+
+	return 0;
+}
